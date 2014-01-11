@@ -3,22 +3,28 @@
 "==================================
 
 ""设置编码方式
+" 设置编码必须放在最前面，否则无法识别utf8编码
 set encoding=utf-8
 "自动判断编码时 依次尝试一下编码
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" 设置编码必须放在最前面，否则无法识别utf8编码
 
-" 设置命令
+" load source files.
+source ~/opt/git/dotfiles/vim/function.vim
+" mapping file
+source ~/opt/git/dotfiles/vim/mapping.vim
+
+
 "set listchars=eol:¬
 set listchars=tab:▸\ ,eol:¬
 "set lcs=tab:>-,eol:¬
 set list
 
 
-imap jj <ESC>
-nmap <space> :
-nmap <leader>1 :set list!<CR>
+
+" taps and spaces
+" help tapstop
+set ts=8 sts=4 sw=4 expandtab
 
 
 " 开启行号
@@ -76,15 +82,15 @@ set t_Co=256
 " set mouse=a
 
 "设置Tab宽度
-set tabstop=4
+"set tabstop=4
 ""设置自动对齐空格数
-set shiftwidth=4
+"set shiftwidth=4
 "设置按退格键时可以一次删除4个空格
-set softtabstop=4
+"set softtabstop=4
 "设置按退格键时可以一次删除4个空格
-set smarttab
+"set smarttab
 "将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]
-set expandtab
+"set expandtab
 "
 "
 "
